@@ -1,0 +1,355 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Welcome Page Styling */
+#welcome-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+#welcome-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#welcome-text {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+}
+
+#welcome-text h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#welcome-text p {
+    font-size: 1em;
+    color: #555;
+}
+
+#welcome-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome-image {
+    max-width: 100%;
+    max-height: 200px;
+    margin-bottom: 20px;
+}
+
+#user-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#user-form label {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+#user-form input {
+    padding: 8px;
+    width: 100%;
+    max-width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#user-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+#user-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Scenario Page Styling */
+#scenario-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+    background-color: #f5f5f5;
+    height: 100vh;
+    justify-content: center;
+}
+
+.scenario-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.scenario-left {
+    flex: 2;
+    padding: 20px;
+}
+
+.scenario-left h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.scenario-left p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.scenario-left ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.scenario-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scenario-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.difficulty-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.difficulty-buttons button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.difficulty-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.difficulty-buttons button:disabled {
+    background-color: #ddd;
+    color: #aaa;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Quiz Layout */
+#quiz-wrapper {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(135deg, #b3ffb3, #ccffcc, #e6ffe6); /* Light green gradient */
+    color: #333; /* Ensure text contrasts well with the light background */
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+#content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+}
+
+/* Question and Timer Alignment */
+#question-timer-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#question-section {
+    flex: 1;
+    margin-right: 20px;
+    text-align: left;
+}
+
+#question-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#options {
+    list-style-type: none;
+    padding: 0;
+}
+
+#options li {
+    padding: 12px;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#options li:hover {
+    background-color: #f1f1f1;
+}
+
+#options li.correct {
+    border: 2px solid green;
+    background-color: #e6ffe6;
+}
+
+#options li.incorrect {
+    border: 2px solid red;
+    background-color: #ffe6e6;
+}
+
+/* Timer and Score Section */
+#timer-score-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+#timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+#timer svg {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+}
+
+#timer circle {
+    fill: none;
+    stroke-width: 8;
+    stroke-dasharray: 339.12; /* Circumference: 2πr where r=54 */
+}
+
+#timer circle:first-child {
+    stroke: #ddd;
+}
+
+#timer-circle {
+    stroke: #007bff;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s linear;
+}
+
+#time-left {
+    position: absolute;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: red;
+}
+
+#score-display {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Congratulations Page */
+#congratulations-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.congratulations-container {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+}
+
+.congratulations-container h2 {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.congratulations-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.congratulations-container button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.congratulations-container button:hover {
+    background-color: #0056b3;
+}

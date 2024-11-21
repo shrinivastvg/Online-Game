@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Welcome Page -->
+<div id="welcome-page">
+    <div id="welcome-container">
+        <div id="welcome-text">
+            <h1>Welcome to the Quiz</h1>
+            <p>Please enter your details to start the quiz.</p>
+        </div>
+        <div id="welcome-right">
+            <img src="C:\Users\shrinivas.taranalaka\Desktop\Online Game\5\Climate-Change-Threat-or-Opportunity-@aura-emagazine.jpg"alt="Welcome Image" id="welcome-image">
+            <form id="user-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <label for="department">Department:</label>
+                <input type="text" id="department" placeholder="Enter your department">
+                <label for="designation">Designation:</label>
+                <input type="text" id="designation" placeholder="Enter your designation">
+                <button type="button" onclick="navigateToScenario()">Start Quiz</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Scenario Page -->
+<div id="scenario-page" style="display: none;">
+    <div class="scenario-container">
+        <div class="scenario-left">
+            <h2>Scenario</h2>
+            <p>A town in Tamil Nadu on the banks of the Amaravathi River is experiencing acute water management challenges. Over-extraction of water from the river for agriculture, industry, and domestic use has led to a significant reduction in river flow, affecting both water quality and availability. Seasonal variations in rainfall further compound the problem, leading to water shortages during dry months.<p>
+
+<p>The town relies on a combination of the Amaravathi River and borewells, but groundwater levels are depleting rapidly, dropping by 2-3 meters annually. The existing water supply infrastructure is outdated, with substantial transmission losses and inadequate coverage, leaving 40% of households dependent on private tankers or borewells.
+To address these issues, a comprehensive water supply project is being planned. The project includes:
+</p>
+            <ul>
+                <li>Constructing new water treatment plants to meet future demand.</li>
+                <li>Upgrading the distribution network to improve efficiency and reduce losses.</li>
+                <li>Introducing SCADA technology for real-time monitoring and control.</li>
+                <li>Developing sustainable practices to rejuvenate the Amaravathi River and protect its ecosystem.</li>
+            </ul>
+<p> As part of the planning team, your role is to identify the challenges and risks, evaluate mitigation measures, and ensure compliance with Environmental, Climate Change, and Social Management Framework (ESCMF) guidelines.<p>
+        </div>
+        <div class="scenario-right">
+            <img src="C:\Users\shrinivas.taranalaka\Desktop\Online Game\5\Town(Before The Project).jpg" alt="Scenario Image" class="scenario-image">
+        </div>
+    </div>
+    <div class="difficulty-buttons">
+        <button id="basic-btn" onclick="startPhase('basic')">Basic</button>
+        <button id="intermediate-btn" disabled onclick="startPhase('intermediate')">Intermediate</button>
+        <button id="advanced-btn" disabled onclick="startPhase('advanced')">Advanced</button>
+    </div>
+</div>
+
+
+   <!-- Quiz Container -->
+<div id="quiz-container" style="display: none;">
+    <div id="quiz-wrapper">
+ 
+<audio id="background-music" loop>
+    <source src="C:\Users\shrinivas.taranalaka\Desktop\Online Game\5\flash-quiz-loop-236356.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<button id="mute-button" onclick="toggleMute()">Mute</button>
+
+        <!-- Main Content Section -->
+        <div id="content-wrapper">
+            <div id="question-timer-container">
+
+                <!-- Question Section -->
+                <div id="question-section">
+                    <h2 id="question"></h2>
+                    <ul id="options"></ul>
+                </div>
+
+                <!-- Timer and Score Section -->
+                <div id="timer-score-container">
+                    <div id="timer">
+                        <svg>
+                            <circle cx="60" cy="60" r="54"></circle>
+                            <circle id="timer-circle" cx="60" cy="60" r="54"></circle>
+                        </svg>
+                        <span id="time-left">20</span>
+                    </div>
+                    <div id="score-display">
+                        Score: <span id="score-value">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Congratulations Page -->
+<div id="congratulations-page" style="display: none;">
+    <div class="congratulations-container">
+        <h2>Congratulations!</h2>
+        <p>You have successfully completed all phases of the game.</p>
+        <p>Excellent work! You are well-versed in the topic.</p>
+        <button onclick="restartQuiz()">Play Again</button>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
